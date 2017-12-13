@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:background="@color/colorAccent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="195dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/toolbar_padding_top"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_space">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/iv_code_img"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:clickable="true"
+                    android:onClick="doClick"
+                    android:src="@mipmap/personal_a1"
+                    app:riv_border_color="#4CFFFFFF"
+                    app:riv_border_width="3dp"
+                    app:riv_oval="true" />
+
+                <TextView
+                    android:id="@+id/tv_code_name"
+                    style="@style/Font15_white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="名称" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_gravity="bottom"
+            android:background="@color/background" />
+
+        <TextView
+            android:id="@+id/tv_code_count"
+            style="@style/Font15_white"
+            android:layout_width="160dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginBottom="7dp"
+            android:background="@drawable/rec_bg_red_stroke_background"
+            android:gravity="center"
+            android:clickable="true"
+            android:onClick="doClick"
+            android:text="我的积分 0" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_height">
+
+        <com.ruanmeng.view.DrawableCenterTextView
+            android:id="@+id/tv_code_apply"
+            style="@style/Font15_black"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:drawableLeft="@mipmap/erwei_ma"
+            android:drawablePadding="@dimen/margin_space"
+            android:gravity="center_vertical"
+            android:onClick="doClick"
+            android:text="邀请好友" />
+
+        <View
+            android:layout_width="@dimen/divider_height"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/margin_space"
+            android:layout_marginTop="@dimen/margin_space"
+            android:background="@color/divider" />
+
+        <com.ruanmeng.view.DrawableCenterTextView
+            android:id="@+id/tv_code_record"
+            style="@style/Font15_black"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:drawableLeft="@mipmap/liwu_li"
+            android:drawablePadding="@dimen/margin_space"
+            android:gravity="center_vertical"
+            android:onClick="doClick"
+            android:text="中奖记录" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_space"
+        android:background="@color/background" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <View
+            android:layout_width="30dp"
+            android:layout_height="@dimen/divider_height"
+            android:background="@color/light" />
+
+        <TextView
+            style="@style/Font13_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/youxi_you"
+            android:drawablePadding="3dp"
+            android:gravity="center_vertical"
+            android:padding="@dimen/margin_space"
+            android:text="大家都在玩" />
+
+        <View
+            android:layout_width="30dp"
+            android:layout_height="@dimen/divider_height"
+            android:background="@color/light" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height"
+        android:background="@color/divider"
+        android:layout_marginBottom="@dimen/margin_space"/>
+
+</LinearLayout>

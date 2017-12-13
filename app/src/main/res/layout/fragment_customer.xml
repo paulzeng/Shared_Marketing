@@ -1,0 +1,132 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.ruanmeng.fragment.CustomerFragment">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_padding_top"
+        android:background="@color/navigationBarColor" />
+
+    <include layout="@layout/layout_title_customer" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height"
+        android:background="@color/divider_header" />
+
+    <net.cachapa.expandablelayout.ExpandableLayout
+        android:id="@+id/el_fragment_customer_expand"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:el_duration="500"
+        app:el_expanded="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/yellow"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/margin_space"
+            android:paddingRight="@dimen/margin_space"
+            app:layout_expandable="true">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@mipmap/ico_ann_1" />
+
+            <com.ruanmeng.view.AlwaysMarqueeTextView
+                android:id="@+id/tv_fragment_customer_gonggao"
+                style="@style/Font13_black"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:paddingLeft="@dimen/margin_space"
+                android:paddingRight="@dimen/margin_space" />
+
+            <ImageView
+                android:id="@+id/iv_fragment_customer_close"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:padding="5dp"
+                android:src="@mipmap/ico_wrong" />
+
+        </LinearLayout>
+
+    </net.cachapa.expandablelayout.ExpandableLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_fragment_customer_recommend"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_height"
+        android:layout_margin="@dimen/margin_space"
+        android:background="@drawable/btn_bg_selector"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick="doClick">
+
+        <ImageView
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:src="@mipmap/ico_add" />
+
+        <TextView
+            style="@style/Font15_white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="推荐用户" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_height"
+            android:background="@color/divider" />
+
+        <com.shizhefei.view.indicator.ScrollIndicatorView
+            android:id="@+id/siv_fragment_customer_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:fillViewport="false" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_height"
+            android:background="@color/divider" />
+
+    </LinearLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/rl_fragment_customer_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/lv_fragment_customer_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <include layout="@layout/layout_empty" />
+
+        </FrameLayout>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</LinearLayout>

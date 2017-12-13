@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height"
+        android:background="@color/divider_header" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingBottom="15dp"
+                android:paddingLeft="@dimen/margin_space"
+                android:paddingRight="@dimen/margin_space"
+                android:paddingTop="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/Font13_light"
+                        android:layout_width="95dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/margin_space"
+                        android:gravity="end"
+                        android:text="客户姓名：" />
+
+                    <TextView
+                        android:id="@+id/tv_review_name_ke"
+                        style="@style/Font13_black"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="名称" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        style="@style/Font13_light"
+                        android:layout_width="95dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/margin_space"
+                        android:gravity="end"
+                        android:text="客户电话：" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_review_phone_ke"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:onClick="doClick">
+
+                        <TextView
+                            android:id="@+id/tv_review_phone_ke"
+                            style="@style/Font13_black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="电话" />
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginLeft="@dimen/margin_space"
+                            android:src="@mipmap/ico_call" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp">
+
+                    <TextView
+                        style="@style/Font13_light"
+                        android:layout_width="95dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/margin_space"
+                        android:gravity="end"
+                        android:text="项目名称：" />
+
+                    <TextView
+                        android:id="@+id/tv_review_project"
+                        style="@style/Font13_black"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="项目名称" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp">
+
+                    <TextView
+                        style="@style/Font13_light"
+                        android:layout_width="95dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/margin_space"
+                        android:gravity="end"
+                        android:text="推荐人姓名：" />
+
+                    <TextView
+                        android:id="@+id/tv_review_name_tui"
+                        style="@style/Font13_black"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="姓名" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_review_phone_tui"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:clickable="true"
+                    android:onClick="doClick">
+
+                    <TextView
+                        style="@style/Font13_light"
+                        android:layout_width="95dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/margin_space"
+                        android:gravity="end"
+                        android:text="推荐人电话：" />
+
+                    <TextView
+                        android:id="@+id/tv_review_phone_tui"
+                        style="@style/Font13_black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="电话" />
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginLeft="@dimen/margin_space"
+                        android:src="@mipmap/ico_call" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp">
+
+                    <TextView
+                        style="@style/Font13_light"
+                        android:layout_width="95dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/margin_space"
+                        android:gravity="end"
+                        android:text="客户状态：" />
+
+                    <TextView
+                        android:id="@+id/tv_review_status"
+                        style="@style/Font13_black"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="状态" />
+
+                </LinearLayout>
+
+                <net.cachapa.expandablelayout.ExpandableLayout
+                    android:id="@+id/el_review_expand"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:el_duration="500"
+                    app:el_expanded="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_expandable="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="15dp">
+
+                            <TextView
+                                style="@style/Font13_light"
+                                android:layout_width="95dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/margin_space"
+                                android:gravity="end"
+                                android:text="户型：" />
+
+                            <TextView
+                                android:id="@+id/tv_review_hu"
+                                style="@style/Font13_black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="15dp">
+
+                            <TextView
+                                style="@style/Font13_light"
+                                android:layout_width="95dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/margin_space"
+                                android:gravity="end"
+                                android:text="区域：" />
+
+                            <TextView
+                                android:id="@+id/tv_review_qu"
+                                style="@style/Font13_black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="15dp">
+
+                            <TextView
+                                style="@style/Font13_light"
+                                android:layout_width="95dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/margin_space"
+                                android:gravity="end"
+                                android:text="业态：" />
+
+                            <TextView
+                                android:id="@+id/tv_review_ye"
+                                style="@style/Font13_black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="15dp">
+
+                            <TextView
+                                style="@style/Font13_light"
+                                android:layout_width="95dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/margin_space"
+                                android:gravity="end"
+                                android:text="身份证：" />
+
+                            <TextView
+                                android:id="@+id/tv_review_card"
+                                style="@style/Font13_black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </net.cachapa.expandablelayout.ExpandableLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/Font13_light"
+                        android:layout_width="95dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/margin_space"
+                        android:gravity="end"
+                        android:text="置业顾问：" />
+
+                    <TextView
+                        android:id="@+id/tv_review_name_zhi"
+                        style="@style/Font13_black"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="姓名" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center_vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/Font13_light"
+                        android:layout_width="95dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/margin_space"
+                        android:gravity="end"
+                        android:text="置业顾问电话：" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_review_phone_zhi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:onClick="doClick">
+
+                        <TextView
+                            android:id="@+id/tv_review_phone_zhi"
+                            style="@style/Font13_black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="电话" />
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginLeft="@dimen/margin_space"
+                            android:src="@mipmap/ico_call" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp">
+
+                    <TextView
+                        style="@style/Font13_light"
+                        android:layout_width="95dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/margin_space"
+                        android:gravity="end"
+                        android:text="推荐时间：" />
+
+                    <TextView
+                        android:id="@+id/tv_review_time"
+                        style="@style/Font13_light"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <net.cachapa.expandablelayout.ExpandableLayout
+                    android:id="@+id/el_review_memo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:el_duration="500"
+                    app:el_expanded="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="15dp"
+                        app:layout_expandable="true">
+
+                        <TextView
+                            style="@style/Font13_light"
+                            android:layout_width="95dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/margin_space"
+                            android:gravity="end"
+                            android:text="备注：" />
+
+                        <TextView
+                            android:id="@+id/tv_review_beizhu"
+                            style="@style/Font13_light"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:lineSpacingExtra="3dp" />
+
+                    </LinearLayout>
+
+                </net.cachapa.expandablelayout.ExpandableLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_height"
+                android:background="@color/divider" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_space"
+                android:background="@color/background" />
+            
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_height"
+                android:background="@color/divider" />
+
+            <LinearLayout
+                android:id="@+id/ll_review_ok"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btn_review_ok"
+                    style="@style/Font15_white"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/btn_height"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/btn_bg_selector"
+                    android:onClick="doClick"
+                    android:text="审核通过" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

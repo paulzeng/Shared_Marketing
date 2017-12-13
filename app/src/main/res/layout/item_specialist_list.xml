@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/margin_space"
+        android:paddingRight="@dimen/margin_space"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp" >
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/iv_item_specialist_img"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@mipmap/not_2"
+            android:scaleType="centerCrop"
+            app:riv_oval="true"
+            android:layout_marginRight="@dimen/margin_space" />
+
+        <TextView
+            android:id="@+id/tv_item_specialist_group"
+            style="@style/Font13_gray"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_marginRight="@dimen/margin_space"
+            android:text="标题" />
+
+        <TextView
+            android:id="@+id/tv_item_specialist_num"
+            style="@style/Font13_gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_space"
+            android:text="0人" />
+
+        <ImageView
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:src="@mipmap/arrow_right" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/v_item_specialist_divider_1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height"
+        android:layout_marginLeft="@dimen/margin_space"
+        android:layout_marginRight="@dimen/margin_space"
+        android:background="@color/divider" />
+
+    <View
+        android:id="@+id/v_item_specialist_divider_2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height"
+        android:background="@color/divider"
+        android:visibility="gone"/>
+
+</LinearLayout>

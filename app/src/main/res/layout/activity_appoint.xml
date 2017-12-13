@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_appoint"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ruanmeng.shared_marketing.Partner.AppointActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_height"
+            android:background="@color/divider_header" />
+
+        <ImageView
+            android:id="@+id/iv_appoint_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@mipmap/ico_bg_yue" />
+
+        <TextView
+            android:id="@+id/tv_appoint_hint"
+            style="@style/Font13_light"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="3dp"
+            android:padding="@dimen/margin_space"
+            android:text="@string/hint_appoint"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_height"
+            android:background="@color/divider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_height"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/margin_space"
+                android:paddingRight="@dimen/margin_space">
+
+                <TextView
+                    style="@style/Font13_black"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:gravity="end"
+                    android:text="姓名：" />
+
+                <EditText
+                    android:id="@+id/et_appoint_name"
+                    style="@style/Font13_black"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:hint="请输入您的姓名"
+                    android:maxLength="5" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_height"
+                android:layout_marginLeft="@dimen/margin_space"
+                android:layout_marginRight="@dimen/margin_space"
+                android:background="@color/divider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_height"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/margin_space"
+                android:paddingRight="@dimen/margin_space">
+
+                <TextView
+                    style="@style/Font13_black"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:gravity="end"
+                    android:text="手机号：" />
+
+                <EditText
+                    android:id="@+id/et_appoint_phone"
+                    style="@style/Font13_black"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:hint="请输入您的手机号"
+                    android:inputType="phone"
+                    android:maxLength="11" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_height"
+                android:layout_marginLeft="@dimen/margin_space"
+                android:layout_marginRight="@dimen/margin_space"
+                android:background="@color/divider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_height"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/margin_space"
+                android:paddingRight="@dimen/margin_space">
+
+                <TextView
+                    style="@style/Font13_black"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:gravity="end"
+                    android:text="称呼：" />
+
+                <RadioGroup
+                    android:id="@+id/rg_appoint_gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_appoint_male"
+                        style="@style/Font13_light"
+                        android:layout_width="70dp"
+                        android:layout_height="match_parent"
+                        android:checked="true"
+                        android:paddingLeft="5dp"
+                        android:text="男" />
+
+                    <RadioButton
+                        android:id="@+id/rb_appoint_female"
+                        style="@style/Font13_light"
+                        android:layout_width="70dp"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="5dp"
+                        android:text="女" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_height"
+                android:layout_marginLeft="@dimen/margin_space"
+                android:layout_marginRight="@dimen/margin_space"
+                android:background="@color/divider" />
+
+            <LinearLayout
+                android:id="@+id/ll_appoint_look"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_height"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:onClick="doClick"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/margin_space"
+                android:paddingRight="@dimen/margin_space">
+
+                <TextView
+                    style="@style/Font13_black"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:gravity="end"
+                    android:text="看房时间：" />
+
+                <TextView
+                    android:id="@+id/tv_appoint_look"
+                    style="@style/Font13_black"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:hint="请选择时间" />
+
+                <ImageView
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:src="@mipmap/arrow_right" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_height"
+                android:layout_marginLeft="@dimen/margin_space"
+                android:layout_marginRight="@dimen/margin_space"
+                android:background="@color/divider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_height"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/margin_space"
+                android:paddingRight="@dimen/margin_space">
+
+                <TextView
+                    style="@style/Font13_black"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:gravity="end"
+                    android:text="人数：" />
+
+                <EditText
+                    android:id="@+id/et_appoint_num"
+                    style="@style/Font13_black"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:hint="请输入人数"
+                    android:inputType="number"
+                    android:maxLength="10" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_height"
+                android:layout_marginLeft="@dimen/margin_space"
+                android:layout_marginRight="@dimen/margin_space"
+                android:background="@color/divider" />
+
+            <LinearLayout
+                android:id="@+id/ll_appoint_start"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:onClick="doClick"
+                android:paddingLeft="@dimen/margin_space"
+                android:paddingRight="@dimen/margin_space">
+
+                <TextView
+                    style="@style/Font13_black"
+                    android:layout_width="65dp"
+                    android:layout_height="@dimen/line_height"
+                    android:layout_marginRight="20dp"
+                    android:gravity="end|center_vertical"
+                    android:text="出发地：" />
+
+                <TextView
+                    android:id="@+id/tv_appoint_start"
+                    style="@style/Font13_black"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:hint="请选择出发地" />
+
+                <ImageView
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:src="@mipmap/arrow_right" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_height"
+                android:layout_marginLeft="@dimen/margin_space"
+                android:layout_marginRight="@dimen/margin_space"
+                android:background="@color/divider" />
+
+            <LinearLayout
+                android:id="@+id/ll_appoint_end"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_height"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:onClick="doClick"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/margin_space"
+                android:paddingRight="@dimen/margin_space">
+
+                <TextView
+                    style="@style/Font13_black"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:gravity="end"
+                    android:text="目的地：" />
+
+                <TextView
+                    android:id="@+id/tv_appoint_end"
+                    style="@style/Font13_black"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:hint="请选择目的地" />
+
+                <ImageView
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:src="@mipmap/arrow_right" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_height"
+            android:background="@color/divider" />
+
+        <Button
+            android:id="@+id/btn_appoint_ok"
+            style="@style/Font13_white"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:layout_margin="20dp"
+            android:background="@drawable/btn_bg_selector"
+            android:onClick="doClick"
+            android:text="确定" />
+
+        <LinearLayout
+            android:id="@+id/ll_appoint_tel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:onClick="doClick">
+
+            <TextView
+                style="@style/Font13_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="在线电话约车：" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/tel_2" />
+
+            <TextView
+                android:id="@+id/tv_appoint_tel"
+                style="@style/Font13_gray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

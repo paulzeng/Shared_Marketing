@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height"
+        android:background="@color/divider_header" />
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/mv_grab_map"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_space">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/iv_grab_img"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="5dp"
+            android:src="@mipmap/personal_a20"
+            app:riv_oval="true" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="10dp">
+
+            <TextView
+                android:id="@+id/tv_grab_name1"
+                style="@style/Font13_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="申请人：XX" />
+
+            <ImageView
+                android:id="@+id/iv_grab_tel"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="5dp"
+                android:clickable="true"
+                android:onClick="doClick"
+                android:src="@mipmap/icon_tel_driver" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_height"
+            android:layout_margin="@dimen/margin_space"
+            android:background="@color/divider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_space"
+            android:layout_marginRight="@dimen/margin_space">
+
+            <ImageView
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginRight="@dimen/margin_space"
+                android:layout_marginTop="4dp"
+                android:src="@drawable/circle_red" />
+
+            <TextView
+                style="@style/Font13_black"
+                android:layout_width="65dp"
+                android:layout_height="wrap_content"
+                android:text="客户位置：" />
+
+            <TextView
+                android:id="@+id/tv_grab_addr1"
+                style="@style/Font13_light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="起点" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_space"
+            android:layout_marginRight="@dimen/margin_space"
+            android:layout_marginTop="@dimen/margin_space">
+
+            <ImageView
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginRight="@dimen/margin_space"
+                android:layout_marginTop="4dp" />
+
+            <TextView
+                style="@style/Font13_black"
+                android:layout_width="65dp"
+                android:layout_height="wrap_content"
+                android:text="终点位置：" />
+
+            <TextView
+                android:id="@+id/tv_grab_addr2"
+                style="@style/Font13_light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="终点" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_height"
+            android:layout_margin="@dimen/margin_space"
+            android:background="@color/divider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_space"
+            android:layout_marginRight="@dimen/margin_space">
+
+            <ImageView
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginRight="@dimen/margin_space"
+                android:layout_marginTop="4dp" />
+
+            <TextView
+                style="@style/Font13_black"
+                android:layout_width="65dp"
+                android:layout_height="wrap_content"
+                android:text="客户姓名：" />
+
+            <TextView
+                android:id="@+id/tv_grab_name2"
+                style="@style/Font13_light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="XX" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_space"
+            android:layout_marginRight="@dimen/margin_space"
+            android:layout_marginTop="@dimen/margin_space">
+
+            <ImageView
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginRight="@dimen/margin_space"
+                android:layout_marginTop="4dp" />
+
+            <TextView
+                style="@style/Font13_black"
+                android:layout_width="65dp"
+                android:layout_height="wrap_content"
+                android:text="客户电话：" />
+
+            <TextView
+                android:id="@+id/tv_grab_tel"
+                style="@style/Font13_light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="电话" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_space"
+            android:layout_marginRight="@dimen/margin_space"
+            android:layout_marginTop="@dimen/margin_space">
+
+            <ImageView
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginRight="@dimen/margin_space"
+                android:layout_marginTop="4dp" />
+
+            <TextView
+                style="@style/Font13_black"
+                android:layout_width="65dp"
+                android:layout_height="wrap_content"
+                android:text="客户人数：" />
+
+            <TextView
+                android:id="@+id/tv_grab_num"
+                style="@style/Font13_light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="0人" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_height"
+            android:layout_margin="@dimen/margin_space"
+            android:background="@color/divider" />
+
+        <Button
+            android:id="@+id/btn_grab_qiang"
+            style="@style/Font15_white"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/btn_bg_selector"
+            android:onClick="doClick"
+            android:text="立即抢单" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height"
+        android:background="@color/divider" />
+
+</LinearLayout>

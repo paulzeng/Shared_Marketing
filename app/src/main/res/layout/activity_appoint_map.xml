@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_padding_top"
+        android:background="@color/navigationBarColor" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/mv_appoint_map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/iv_appoint_map_location"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom"
+            android:layout_margin="@dimen/margin_space"
+            android:background="@drawable/rec_bg_eeffffff_stroke_d8d8d8"
+            android:clickable="true"
+            android:onClick="doClick"
+            android:padding="12dp"
+            android:src="@mipmap/icon_location_map" />
+
+        <LinearLayout
+            android:id="@+id/ll_appoint_map_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="27dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_appoint_map_center"
+                style="@style/Font13_black"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:background="@mipmap/location_bg"
+                android:gravity="center_horizontal"
+                android:paddingTop="4dp"
+                android:layout_marginLeft="2dp"
+                android:clickable="true"
+                android:onClick="doClick"
+                android:text="从这里上车" />
+
+            <ImageView
+                android:id="@+id/iv_appoint_map_center"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginTop="3dp"
+                android:adjustViewBounds="true"
+                android:src="@mipmap/location_center" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_appoint_map_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </FrameLayout>
+
+</LinearLayout>

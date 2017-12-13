@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_deal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.ruanmeng.shared_marketing.Partner.DealActivity">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height"
+        android:background="@color/divider_header" />
+
+    <TextView
+        android:id="@+id/tv_deal_hint"
+        style="@style/Font13_light"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/margin_space" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <View
+            android:id="@+id/v_deal_header"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_height"
+            android:background="@color/divider" />
+
+        <LinearLayout
+            android:id="@+id/ll_deal_yzm"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_height"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/margin_space"
+            android:paddingRight="@dimen/margin_space">
+
+            <EditText
+                android:id="@+id/et_deal_yzm"
+                style="@style/Font13_black"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:hint="请输入验证码"
+                android:inputType="number"
+                android:maxLength="10"
+                android:maxLines="1" />
+
+            <Button
+                android:id="@+id/btn_deal_yzm"
+                style="@style/Font13_gray"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:background="@drawable/rec_bg_f6f6f6_stroke_d8d8d8"
+                android:gravity="center"
+                android:onClick="doClick"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="发送验证码" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/v_deal_yzm_divider"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_height"
+            android:layout_marginLeft="@dimen/margin_space"
+            android:layout_marginRight="@dimen/margin_space"
+            android:background="@color/divider" />
+
+        <EditText
+            android:id="@+id/et_deal_pwd"
+            style="@style/Font13_black"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_height"
+            android:background="@android:color/white"
+            android:hint="请输入6位交易密码"
+            android:paddingLeft="@dimen/margin_space"
+            android:inputType="numberPassword"
+            android:maxLength="6" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_height"
+            android:layout_marginLeft="@dimen/margin_space"
+            android:layout_marginRight="@dimen/margin_space"
+            android:background="@color/divider" />
+
+        <EditText
+            android:id="@+id/et_deal_confirm"
+            style="@style/Font13_black"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_height"
+            android:background="@android:color/white"
+            android:hint="请再次输入6位交易密码"
+            android:paddingLeft="@dimen/margin_space"
+            android:inputType="numberPassword"
+            android:maxLength="6" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_height"
+            android:background="@color/divider" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_deal_ok"
+        style="@style/Font15_white"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_height"
+        android:layout_margin="20dp"
+        android:background="@drawable/btn_bg_selector"
+        android:onClick="doClick"
+        android:text="完成" />
+
+    <TextView
+        style="@style/Font13_light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_space"
+        android:layout_gravity="center_horizontal"
+        android:text="交易密码在提现中使用" />
+
+</LinearLayout>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_lower"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.ruanmeng.shared_marketing.Partner.LowerActivity">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height"
+        android:background="@color/divider_header" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            style="@style/Font15_black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="推荐方式一：二维码分享" />
+
+        <Button
+            android:id="@+id/btn_lower_generate"
+            style="@style/Font13_white"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/btn_bg_selector"
+            android:onClick="doClick"
+            android:text="生成我的推广二维码" />
+
+        <TextView
+            style="@style/Font15_black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="推荐方式二：请复制以下链接发送给好友" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/rec_bg_e1e1e1_stroke_999999">
+
+            <TextView
+                android:id="@+id/tv_lower_link"
+                style="@style/Font13_black"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/margin_space"
+                android:paddingRight="@dimen/margin_space"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                android:lineSpacingExtra="3dp" />
+
+            <TextView
+                android:id="@+id/tv_lower_copy"
+                style="@style/Font13_white"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/gray"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="doClick"
+                android:paddingLeft="@dimen/margin_space"
+                android:paddingRight="@dimen/margin_space"
+                android:text="复制链接" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="@dimen/margin_space"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tv_item_commission_title"
+                style="@style/Font13_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="标题" />
+
+            <TextView
+                android:id="@+id/tv_item_commission_status"
+                style="@style/Font13_white"
+                android:layout_width="35dp"
+                android:layout_height="15dp"
+                android:background="#00CC00"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:text="标题"
+                android:textSize="9sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_item_commission_time"
+                style="@style/Font13_light"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="2017/02/14 23:28" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_space">
+
+            <TextView
+                android:id="@+id/tv_item_commission_rest"
+                style="@style/Font13_light"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="余额：0.00" />
+
+            <TextView
+                android:id="@+id/tv_item_commission_reduce"
+                style="@style/Font13_light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorAccent"
+                android:text="-0.00" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_item_commission_memo"
+            style="@style/Font13_gray"
+            android:layout_marginTop="@dimen/margin_space"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/v_item_commission_divider_1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height"
+        android:layout_marginLeft="@dimen/margin_space"
+        android:layout_marginRight="@dimen/margin_space"
+        android:background="@color/divider" />
+
+    <View
+        android:id="@+id/v_item_commission_divider_2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height"
+        android:background="@color/divider"
+        android:visibility="gone"/>
+
+</LinearLayout>

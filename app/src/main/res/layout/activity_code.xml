@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_code"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ruanmeng.shared_marketing.Partner.CodeActivity">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/rl_code_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/lv_code_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white" />
+
+        </FrameLayout>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/toolbar_padding_top"
+        android:background="@color/colorAccent">
+
+        <ImageView
+            android:id="@id/iv_nav_right"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center_vertical|end"
+            android:clickable="true"
+            android:onClick="doClick"
+            android:padding="10dp"
+            android:src="@mipmap/personal_a17" />
+
+        <ImageView
+            android:id="@id/iv_nav_back"
+            android:layout_width="35dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:clickable="true"
+            android:onClick="doClick"
+            android:padding="6dp"
+            android:src="@mipmap/arrow_left_1" />
+
+    </FrameLayout>
+
+</FrameLayout>

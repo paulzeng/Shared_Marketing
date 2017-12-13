@@ -1,0 +1,103 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+repositories {
+    mavenCentral()
+    flatDir {
+        dir 'libs'
+    }
+}
+
+android {
+    compileSdkVersion project.COMPILE_SDK_VERSION
+    buildToolsVersion project.BUILD_TOOLS_VERSION
+    defaultConfig {
+        applicationId "com.ruanmeng.shared_marketing"
+        minSdkVersion project.MIN_SDK_VERSION
+        targetSdkVersion project.TARGET_SDK_VERSION
+        versionCode 21
+        versionName "1.2.7"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+    buildTypes {
+        debug {
+            // 显示Log打印输出
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            buildConfigField "String", "API_HOST", "\"http://yx.kaiyuanyihao.com\""
+            // buildConfigField "String", "API_HOST", "\"https://hkt.kaiyuanyihao.com\""
+            minifyEnabled false // 混淆编译
+            zipAlignEnabled false // Zip代码压缩优化
+        }
+        release {
+            // 不显示Log打印输出
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            buildConfigField "String", "API_HOST", "\"https://hkt.kaiyuanyihao.com\""
+            minifyEnabled false // 混淆编译false
+            zipAlignEnabled true // Zip代码压缩优化
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    // 移除lint检查的error（程序在buid的时候，会执行lint检查）
+    lintOptions {
+        abortOnError false
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+        main {
+            jniLibs.srcDir 'libs'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testCompile 'junit:junit:4.12'
+    // ui
+    compile "com.android.support:appcompat-v7:${supportPackageVersion}"
+    compile "com.android.support:recyclerview-v7:${supportPackageVersion}"
+    compile "com.android.support:design:${supportPackageVersion}"
+    compile "com.android.support:support-v4:${supportPackageVersion}"
+    compile "com.android.support:cardview-v7:${supportPackageVersion}"
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+
+    // kotlin
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+
+    // butterknife
+    compile 'com.jakewharton:butterknife:8.1.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.1.0'
+
+    // permission
+    compile 'com.github.hotchemi:permissionsdispatcher:2.2.0'
+    annotationProcessor 'com.github.hotchemi:permissionsdispatcher-processor:2.2.0'
+
+    compile project(':Nohttp')
+    compile project(':Indicator')
+    compile project(':LoopView')
+    compile project(':SuperText')
+    compile project(':QRcode')
+    compile project(':ScrollableLayout')
+    compile project(':RollViewPager')
+    compile project(':UmengSocial')
+    compile project(':Cropper')
+    compile project(':GridPasswordView')
+    compile project(':PhotoView')
+    compile project(':JPush')
+    compile project(':BaiduMap')
+
+    compile 'net.cachapa.expandablelayout:expandablelayout:2.7'
+    compile 'com.makeramen:roundedimageview:2.2.1'
+    compile 'com.flyco.dialog:FlycoDialog_Lib:1.3.2@aar'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.zhy:base-rvadapter:3.0.3'
+    compile 'com.google.code.gson:gson:2.7'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.github.lguipeng:BubbleView:1.0.1'
+}

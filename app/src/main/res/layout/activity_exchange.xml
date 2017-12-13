@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_exchange"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.ruanmeng.shared_marketing.Partner.ExchangeActivity">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height"
+        android:background="@color/divider_header" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_height"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/margin_space"
+        android:paddingRight="@dimen/margin_space">
+
+        <TextView
+            style="@style/Font13_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="当前积分余额为：" />
+
+        <TextView
+            android:id="@+id/tv_exchange_num"
+            style="@style/Font13_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="@color/colorAccent" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height"
+        android:background="@color/divider" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height"
+        android:layout_marginTop="@dimen/margin_space"
+        android:background="@color/divider" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/Font13_gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_space"
+            android:text="兑换积分：" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/margin_space"
+            android:paddingRight="@dimen/margin_space">
+
+            <EditText
+                android:id="@+id/et_exchange_count"
+                style="@style/Font15_black"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:hint="请输入要兑换的积分"
+                android:inputType="number"
+                android:maxLines="1"
+                android:textColor="@color/colorAccent"
+                android:background="@null"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/iv_exchange_clear"
+                android:layout_width="@dimen/line_height"
+                android:layout_height="@dimen/line_height"
+                android:padding="12dp"
+                android:src="@mipmap/ico_code"
+                android:clickable="true"
+                android:onClick="doClick" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_height"
+            android:layout_marginLeft="@dimen/margin_space"
+            android:layout_marginRight="@dimen/margin_space"
+            android:background="@color/divider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_height"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/margin_space"
+            android:paddingRight="@dimen/margin_space">
+
+            <TextView
+                style="@style/Font13_light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="可兑换为：" />
+
+            <TextView
+                android:id="@+id/tv_exchange_money"
+                style="@style/Font13_gray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0元"
+                android:textColor="@color/colorAccent" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height"
+        android:background="@color/divider" />
+
+    <Button
+        android:id="@+id/btn_exchange_ok"
+        style="@style/Font15_white"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_height"
+        android:layout_margin="20dp"
+        android:background="@drawable/btn_bg_selector"
+        android:onClick="doClick"
+        android:text="兑换" />
+
+    <TextView
+        android:id="@+id/tv_exchange_rule"
+        style="@style/Font13_light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="兑换规则：" />
+
+</LinearLayout>

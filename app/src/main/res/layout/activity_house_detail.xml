@@ -1,0 +1,878 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_house_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.ruanmeng.shared_marketing.Partner.HouseDetailActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.scrollablelayout.ScrollableLayout
+            android:id="@+id/sl_house_detail_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:background="@mipmap/not_2">
+
+                    <com.jude.rollviewpager.RollPagerView
+                        android:id="@+id/rp_house_detail_banner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:rollviewpager_hint_paddingRight="@dimen/activity_horizontal_margin"
+                        app:rollviewpager_play_delay="3000" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:gravity="center_vertical"
+                        android:padding="@dimen/margin_space">
+
+                        <TextView
+                            android:id="@+id/tv_house_detail_banner_hint"
+                            style="@style/Font13_white"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="实景图" />
+
+                        <TextView
+                            android:id="@+id/tv_house_detail_banner"
+                            style="@style/Font13_white"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@mipmap/beijing"
+                            android:gravity="center"
+                            android:paddingLeft="15dp"
+                            android:paddingRight="15dp"
+                            android:text="0/0"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:padding="@dimen/margin_space">
+
+                        <TextView
+                            android:id="@+id/tv_house_detail_price"
+                            style="@style/Font15_black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="5600"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            style="@style/Font13_black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_space"
+                            android:text="元/㎡"
+                            android:textColor="@color/colorAccent" />
+
+                        <TextView
+                            android:id="@+id/tv_house_detail_status"
+                            style="@style/Font13_black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_space"
+                            android:text="[在售]"
+                            android:textColor="@color/colorAccent" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_house_detail_addr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_space"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:onClick="doClick">
+
+                        <TextView
+                            android:id="@+id/tv_house_detail_addr"
+                            style="@style/Font13_black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="地址" />
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_marginLeft="@dimen/margin_space"
+                            android:src="@mipmap/map" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_space"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/margin_space">
+
+                        <TextView
+                            style="@style/Font13_light"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="意向客户：" />
+
+                        <TextView
+                            android:id="@+id/tv_house_detail_yi"
+                            style="@style/Font13_black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="15dp"
+                            android:layout_marginLeft="@dimen/margin_space"
+                            android:layout_marginRight="@dimen/margin_space"
+                            android:background="@color/divider" />
+
+                        <TextView
+                            style="@style/Font13_light"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="合作经纪人：" />
+
+                        <TextView
+                            android:id="@+id/tv_house_detail_he"
+                            style="@style/Font13_black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="15dp"
+                            android:layout_marginLeft="@dimen/margin_space"
+                            android:layout_marginRight="@dimen/margin_space"
+                            android:background="@color/divider" />
+
+                        <TextView
+                            style="@style/Font13_light"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="最近成交：" />
+
+                        <TextView
+                            android:id="@+id/tv_house_detail_done"
+                            style="@style/Font13_black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/divider_height"
+                        android:layout_marginLeft="@dimen/margin_space"
+                        android:layout_marginRight="@dimen/margin_space"
+                        android:layout_marginTop="@dimen/margin_space"
+                        android:background="@color/divider" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/margin_space">
+
+                        <TextView
+                            style="@style/Font13_light"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="开盘时间：" />
+
+                        <TextView
+                            android:id="@+id/tv_house_detail_kai"
+                            style="@style/Font13_black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="2017-02-14" />
+
+                        <TextView
+                            style="@style/Font13_light"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="交房时间：" />
+
+                        <TextView
+                            android:id="@+id/tv_house_detail_jiao"
+                            style="@style/Font13_black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2017-02" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_height"
+                    android:background="@color/divider" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_height"
+                    android:layout_marginTop="@dimen/margin_space"
+                    android:background="@color/divider" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/Font15_black"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/margin_space"
+                        android:drawableLeft="@drawable/rec_bg_line"
+                        android:drawablePadding="5dp"
+                        android:text="合作规则" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/divider_height"
+                        android:layout_marginLeft="@dimen/margin_space"
+                        android:layout_marginRight="@dimen/margin_space"
+                        android:background="@color/divider" />
+
+                    <com.ruanmeng.view.WrapWebView
+                        android:id="@+id/wv_house_detail_rule"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_height"
+                    android:background="@color/divider" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_height"
+                    android:layout_marginTop="@dimen/margin_space"
+                    android:background="@color/divider" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_house_detail_main"
+                        style="@style/Font15_black"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/margin_space"
+                        android:text="主力户型（0个）" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/divider_height"
+                        android:layout_marginLeft="@dimen/margin_space"
+                        android:layout_marginRight="@dimen/margin_space"
+                        android:background="@color/divider" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/lv_house_detail_main"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_height"
+                    android:layout_marginBottom="@dimen/margin_space"
+                    android:background="@color/divider" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_height"
+                    android:background="@color/divider" />
+
+                <com.shizhefei.view.indicator.FixedIndicatorView
+                    android:id="@+id/fiv_house_detail_indicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_height" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_height"
+                    android:background="@color/divider" />
+
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.ruanmeng.view.WrapWebView
+                        android:id="@+id/wv_house_detail_mai"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_house_detail_xiang"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/iv_house_detail_map"
+                            android:layout_width="match_parent"
+                            android:layout_height="220dp"
+                            android:clickable="true"
+                            android:onClick="doClick"
+                            android:scaleType="centerCrop"
+                            android:src="@mipmap/not_2" />
+
+                        <TextView
+                            style="@style/Font13_black"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:paddingLeft="@dimen/margin_space"
+                            android:text="基本参数"
+                            android:textColor="#11CBB7" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_space"
+                            android:paddingLeft="@dimen/margin_space"
+                            android:paddingRight="@dimen/margin_space">
+
+                            <TextView
+                                style="@style/Font13_light"
+                                android:layout_width="85dp"
+                                android:layout_height="wrap_content"
+                                android:text="开盘时间：" />
+
+                            <TextView
+                                android:id="@+id/tv_house_detail_kai1"
+                                style="@style/Font13_black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="2017-02-14" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_space"
+                            android:paddingLeft="@dimen/margin_space"
+                            android:paddingRight="@dimen/margin_space">
+
+                            <TextView
+                                style="@style/Font13_light"
+                                android:layout_width="85dp"
+                                android:layout_height="wrap_content"
+                                android:text="交房时间：" />
+
+                            <TextView
+                                android:id="@+id/tv_house_detail_jiao1"
+                                style="@style/Font13_black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="2017-02" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_space"
+                            android:paddingLeft="@dimen/margin_space"
+                            android:paddingRight="@dimen/margin_space">
+
+                            <TextView
+                                style="@style/Font13_light"
+                                android:layout_width="85dp"
+                                android:layout_height="wrap_content"
+                                android:text="开  发  商：" />
+
+                            <TextView
+                                android:id="@+id/tv_house_detail_shang"
+                                style="@style/Font13_black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_space"
+                            android:paddingLeft="@dimen/margin_space"
+                            android:paddingRight="@dimen/margin_space">
+
+                            <TextView
+                                style="@style/Font13_light"
+                                android:layout_width="85dp"
+                                android:layout_height="wrap_content"
+                                android:text="开发商品牌：" />
+
+                            <TextView
+                                android:id="@+id/tv_house_detail_shangpin"
+                                style="@style/Font13_black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_space"
+                            android:paddingLeft="@dimen/margin_space"
+                            android:paddingRight="@dimen/margin_space">
+
+                            <TextView
+                                style="@style/Font13_light"
+                                android:layout_width="85dp"
+                                android:layout_height="wrap_content"
+                                android:text="物业公司：" />
+
+                            <TextView
+                                android:id="@+id/tv_house_detail_wuye"
+                                style="@style/Font13_black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_space"
+                            android:paddingLeft="@dimen/margin_space"
+                            android:paddingRight="@dimen/margin_space">
+
+                            <TextView
+                                style="@style/Font13_light"
+                                android:layout_width="85dp"
+                                android:layout_height="wrap_content"
+                                android:text="建筑面积：" />
+
+                            <TextView
+                                android:id="@+id/tv_house_detail_jianzhu"
+                                style="@style/Font13_black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_space"
+                            android:paddingLeft="@dimen/margin_space"
+                            android:paddingRight="@dimen/margin_space">
+
+                            <TextView
+                                style="@style/Font13_light"
+                                android:layout_width="85dp"
+                                android:layout_height="wrap_content"
+                                android:text="总  户  数：" />
+
+                            <TextView
+                                android:id="@+id/tv_house_detail_zonghu"
+                                style="@style/Font13_black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_space"
+                            android:paddingLeft="@dimen/margin_space"
+                            android:paddingRight="@dimen/margin_space">
+
+                            <TextView
+                                style="@style/Font13_light"
+                                android:layout_width="85dp"
+                                android:layout_height="wrap_content"
+                                android:text="容  积  率：" />
+
+                            <TextView
+                                android:id="@+id/tv_house_detail_rongji"
+                                style="@style/Font13_black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_space"
+                            android:paddingLeft="@dimen/margin_space"
+                            android:paddingRight="@dimen/margin_space">
+
+                            <TextView
+                                style="@style/Font13_light"
+                                android:layout_width="85dp"
+                                android:layout_height="wrap_content"
+                                android:text="绿  化  率：" />
+
+                            <TextView
+                                android:id="@+id/tv_house_detail_lvhua"
+                                style="@style/Font13_black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_space"
+                            android:paddingLeft="@dimen/margin_space"
+                            android:paddingRight="@dimen/margin_space">
+
+                            <TextView
+                                style="@style/Font13_light"
+                                android:layout_width="85dp"
+                                android:layout_height="wrap_content"
+                                android:text="车  位  数：" />
+
+                            <TextView
+                                android:id="@+id/tv_house_detail_chewei"
+                                style="@style/Font13_black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            style="@style/Font13_black"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:paddingLeft="@dimen/margin_space"
+                            android:text="住宅参数"
+                            android:textColor="#11CBB7" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_space"
+                            android:paddingLeft="@dimen/margin_space"
+                            android:paddingRight="@dimen/margin_space">
+
+                            <TextView
+                                style="@style/Font13_light"
+                                android:layout_width="85dp"
+                                android:layout_height="wrap_content"
+                                android:text="均        价：" />
+
+                            <TextView
+                                android:id="@+id/tv_house_detail_junjia"
+                                style="@style/Font13_black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_space"
+                            android:paddingLeft="@dimen/margin_space"
+                            android:paddingRight="@dimen/margin_space">
+
+                            <TextView
+                                style="@style/Font13_light"
+                                android:layout_width="85dp"
+                                android:layout_height="wrap_content"
+                                android:text="物  业  费：" />
+
+                            <TextView
+                                android:id="@+id/tv_house_detail_wuyefei"
+                                style="@style/Font13_black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_space"
+                            android:paddingLeft="@dimen/margin_space"
+                            android:paddingRight="@dimen/margin_space">
+
+                            <TextView
+                                style="@style/Font13_light"
+                                android:layout_width="85dp"
+                                android:layout_height="wrap_content"
+                                android:text="建筑类型：" />
+
+                            <TextView
+                                android:id="@+id/tv_house_detail_jianzhutype"
+                                style="@style/Font13_black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_space"
+                            android:paddingLeft="@dimen/margin_space"
+                            android:paddingRight="@dimen/margin_space">
+
+                            <TextView
+                                style="@style/Font13_light"
+                                android:layout_width="85dp"
+                                android:layout_height="wrap_content"
+                                android:text="装修状况：" />
+
+                            <TextView
+                                android:id="@+id/tv_house_detail_zhuangxiu"
+                                style="@style/Font13_black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_space"
+                            android:paddingLeft="@dimen/margin_space"
+                            android:paddingRight="@dimen/margin_space">
+
+                            <TextView
+                                style="@style/Font13_light"
+                                android:layout_width="85dp"
+                                android:layout_height="wrap_content"
+                                android:text="产权年限：" />
+
+                            <TextView
+                                android:id="@+id/tv_house_detail_chanquan"
+                                style="@style/Font13_black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            style="@style/Font13_black"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:paddingLeft="@dimen/margin_space"
+                            android:text="写字楼参数"
+                            android:textColor="#11CBB7" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_space"
+                            android:paddingLeft="@dimen/margin_space"
+                            android:paddingRight="@dimen/margin_space">
+
+                            <TextView
+                                style="@style/Font13_light"
+                                android:layout_width="85dp"
+                                android:layout_height="wrap_content"
+                                android:text="均        价：" />
+
+                            <TextView
+                                android:id="@+id/tv_house_detail_junjia1"
+                                style="@style/Font13_black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_space"
+                            android:paddingLeft="@dimen/margin_space"
+                            android:paddingRight="@dimen/margin_space">
+
+                            <TextView
+                                style="@style/Font13_light"
+                                android:layout_width="85dp"
+                                android:layout_height="wrap_content"
+                                android:text="物  业  费：" />
+
+                            <TextView
+                                android:id="@+id/tv_house_detail_wuyefei1"
+                                style="@style/Font13_black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_space"
+                            android:paddingLeft="@dimen/margin_space"
+                            android:paddingRight="@dimen/margin_space">
+
+                            <TextView
+                                style="@style/Font13_light"
+                                android:layout_width="85dp"
+                                android:layout_height="wrap_content"
+                                android:text="建筑类型：" />
+
+                            <TextView
+                                android:id="@+id/tv_house_detail_jianzhutype1"
+                                style="@style/Font13_black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_space"
+                            android:paddingLeft="@dimen/margin_space"
+                            android:paddingRight="@dimen/margin_space">
+
+                            <TextView
+                                style="@style/Font13_light"
+                                android:layout_width="85dp"
+                                android:layout_height="wrap_content"
+                                android:text="装修状况：" />
+
+                            <TextView
+                                android:id="@+id/tv_house_detail_zhuangxiu1"
+                                style="@style/Font13_black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="25dp"
+                            android:layout_marginTop="@dimen/margin_space"
+                            android:paddingLeft="@dimen/margin_space"
+                            android:paddingRight="@dimen/margin_space">
+
+                            <TextView
+                                style="@style/Font13_light"
+                                android:layout_width="85dp"
+                                android:layout_height="wrap_content"
+                                android:text="产权年限：" />
+
+                            <TextView
+                                android:id="@+id/tv_house_detail_chanquan1"
+                                style="@style/Font13_black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+            </ScrollView>
+
+        </com.scrollablelayout.ScrollableLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_house_detail_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:paddingTop="@dimen/toolbar_padding_top">
+
+            <TextView
+                android:id="@+id/tv_house_detail_title"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="名称"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_house_detail_recommend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:clickable="true"
+                android:onClick="doClick"
+                android:padding="10dp"
+                android:text="一键推荐"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@id/iv_nav_back"
+                android:layout_width="35dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center_vertical"
+                android:clickable="true"
+                android:onClick="doClick"
+                android:padding="6dp"
+                android:src="@mipmap/arrow_left_1" />
+
+        </FrameLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

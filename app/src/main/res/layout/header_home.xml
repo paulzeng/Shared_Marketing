@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/not_2" />
+
+        <com.jude.rollviewpager.RollPagerView
+            android:id="@+id/rp_fragment_home_banner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:rollviewpager_hint_gravity="center"
+            app:rollviewpager_play_delay="3000" />
+
+    </FrameLayout>
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/stv_fragment_home_tui"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        app:sBothLineMargin="0dp"
+        app:sLeftIconMarginLeft="@dimen/margin_space"
+        app:sLeftIconRes="@mipmap/icon_rec"
+        app:sLeftTextColor="@color/black"
+        app:sLeftTextMarginLeft="@dimen/margin_space"
+        app:sLeftTextSize="15sp"
+        app:sLeftTextString="推荐客户"
+        app:sLineShow="both"
+        app:sRightIconMarginRight="@dimen/margin_space"
+        app:sRightIconRes="@mipmap/personal_a9"
+        app:sRightIconSize="12dp"
+        app:sRightTextColor="@color/light"
+        app:sRightTextMarginRight="30dp"
+        app:sRightTextSize="13sp"
+        app:sRightTextString="推荐客户，秒赚佣金" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/margin_space">
+
+        <LinearLayout
+            android:id="@+id/ll_fragment_home_trule"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/rec_bg_ff3300"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="doClick"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:src="@mipmap/icon_tui_1" />
+
+            <TextView
+                style="@style/Font15_white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="推荐客户规则" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_fragment_home_yrule"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+            android:background="@drawable/rec_bg_0066cc"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="doClick"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:src="@mipmap/icon_tui_2" />
+
+            <TextView
+                style="@style/Font15_white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="佣金结算说明" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height"
+        android:background="@color/divider" />
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/stv_fragment_home_jing"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="@dimen/margin_space"
+        app:sBottomLineMargin="@dimen/margin_space"
+        app:sLeftIconMarginLeft="@dimen/margin_space"
+        app:sLeftIconRes="@drawable/rec_bg_line"
+        app:sLeftTextColor="@color/black"
+        app:sLeftTextMarginLeft="@dimen/margin_space"
+        app:sLeftTextSize="15sp"
+        app:sLeftTextString="精选楼盘"
+        app:sLineShow="both"
+        app:sRightIconMarginRight="@dimen/margin_space"
+        app:sRightIconRes="@mipmap/personal_a9"
+        app:sRightIconSize="12dp"
+        app:sRightTextColor="@color/light"
+        app:sRightTextMarginRight="30dp"
+        app:sRightTextSize="13sp"
+        app:sRightTextString="查看全部楼盘"
+        app:sTopLineMargin="0dp" />
+
+</LinearLayout>

@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "D:\\workspace_studio\\Shared_Marketing\\GridPasswordView\\build\\intermediates\\res\\merged\\androidTest\\debug\\values_values.arsc.flat",
+            "map": [
+                {
+                    "source": "D:\\workspace_studio\\Shared_Marketing\\GridPasswordView\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "from": {
+                        "startLines": "8,9,15,18",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "775,812,1102,1251",
+                        "endLines": "8,14,17,25",
+                        "endColumns": "36,12,12,12",
+                        "endOffsets": "807,1097,1246,1628"
+                    }
+                }
+            ]
+        }
+    ]
+}

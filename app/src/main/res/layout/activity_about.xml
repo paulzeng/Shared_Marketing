@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_about"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.ruanmeng.shared_marketing.Partner.AboutActivity">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height"
+        android:background="@color/divider_header" />
+
+    <ImageView
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:src="@mipmap/ico_logo" />
+
+    <TextView
+        android:id="@+id/tv_about_app"
+        style="@style/Font15_black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="50dp"
+        android:layout_marginTop="@dimen/margin_space"
+        android:text="@string/app_name" />
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/stv_about_tel"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_height"
+        android:layout_marginTop="@dimen/margin_space"
+        app:sBottomLineMargin="10dp"
+        app:sLeftTextColor="@color/black"
+        app:sLeftTextMarginLeft="@dimen/margin_space"
+        app:sLeftTextSize="13sp"
+        app:sLeftTextString="客服电话"
+        app:sLineShow="both"
+        app:sRightTextColor="@color/light"
+        app:sRightTextMarginRight="10dp"
+        app:sRightTextSize="13sp"
+        app:sTopLineMargin="0dp" />
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/stv_about_email"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_height"
+        app:sBottomLineMargin="10dp"
+        app:sLeftTextColor="@color/black"
+        app:sLeftTextMarginLeft="@dimen/margin_space"
+        app:sLeftTextSize="13sp"
+        app:sLeftTextString="客服邮箱"
+        app:sLineShow="bottom"
+        app:sRightTextColor="@color/light"
+        app:sRightTextMarginRight="10dp"
+        app:sRightTextSize="13sp" />
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/stv_about_agreement"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_height"
+        app:sBottomLineMargin="0dp"
+        app:sLeftTextColor="@color/black"
+        app:sLeftTextMarginLeft="@dimen/margin_space"
+        app:sLeftTextSize="13sp"
+        app:sLeftTextString="用户协议"
+        app:sLineShow="bottom"
+        app:sRightIconMarginRight="@dimen/margin_space"
+        app:sRightIconRes="@mipmap/arrow_right"
+        app:sRightIconSize="13dp" />
+
+    <TextView
+        style="@style/Font13_light"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/margin_space"
+        android:layout_gravity="center_horizontal"
+        android:gravity="bottom"
+        android:paddingBottom="20dp"
+        android:text="洛阳浩德鑫置地有限公司" />
+
+</LinearLayout>

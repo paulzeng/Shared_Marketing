@@ -1,0 +1,95 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_padding_top"
+        android:background="@color/navigationBarColor" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="?attr/colorPrimary">
+
+        <TextView
+            android:id="@+id/tv_fragment_grab_title"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:text="抢单"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|end"
+            android:paddingRight="5dp">
+
+            <ImageView
+                android:id="@+id/iv_fragment_grab_msg"
+                android:layout_width="35dp"
+                android:layout_height="45dp"
+                android:clickable="true"
+                android:onClick="doClick"
+                android:padding="5dp"
+                android:src="@mipmap/ico_ann_b"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/iv_fragment_grab_search"
+                android:layout_width="35dp"
+                android:layout_height="45dp"
+                android:clickable="true"
+                android:onClick="doClick"
+                android:padding="5dp"
+                android:src="@mipmap/ico_soso" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height"
+        android:background="@color/divider_header" />
+
+    <TextView
+        android:id="@+id/tv_fragment_grab_total"
+        style="@style/Font13_gray"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background"
+        android:gravity="center_vertical"
+        android:padding="@dimen/margin_space"
+        android:text="共0个客户" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height"
+        android:background="@color/divider" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/rl_fragment_grab_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/lv_fragment_grab_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <include layout="@layout/layout_empty" />
+
+        </FrameLayout>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</LinearLayout>

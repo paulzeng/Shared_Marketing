@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "D:\\workspace_studio\\Shared_Marketing\\Nohttp\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxxhdpi-v4_kprogresshud_spinner.png.flat",
+        "source": "D:\\workspace_studio\\Shared_Marketing\\KProgressHUD\\build\\intermediates\\bundles\\debug\\res\\drawable-xxxhdpi-v4\\kprogresshud_spinner.png"
+    },
+    {
+        "merged": "D:\\workspace_studio\\Shared_Marketing\\Nohttp\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_kprogresshud_hud.xml.flat",
+        "source": "D:\\workspace_studio\\Shared_Marketing\\KProgressHUD\\build\\intermediates\\bundles\\debug\\res\\layout\\kprogresshud_hud.xml"
+    }
+]

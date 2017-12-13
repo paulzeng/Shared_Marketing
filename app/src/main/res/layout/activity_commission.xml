@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_commission"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.ruanmeng.shared_marketing.Partner.CommissionActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@mipmap/personal_a15">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_space"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_space">
+
+            <TextView
+                android:id="@+id/tv_points_count"
+                style="@style/Font15_white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                android:textSize="30sp" />
+
+            <TextView
+                style="@style/Font13_white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="累计佣金（元）"
+                android:textSize="12sp"
+                android:textColor="#A8FFFFFF" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/toolbar_padding_top"
+            android:background="@color/colorAccent">
+
+            <TextView
+                android:id="@id/tv_nav_title"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="累计佣金"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@id/iv_nav_right"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center_vertical|end"
+                android:clickable="true"
+                android:onClick="doClick"
+                android:padding="10dp"
+                android:src="@mipmap/personal_a17" />
+
+            <ImageView
+                android:id="@id/iv_nav_back"
+                android:layout_width="35dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:clickable="true"
+                android:onClick="doClick"
+                android:padding="6dp"
+                android:src="@mipmap/arrow_left_1" />
+
+        </FrameLayout>
+
+    </FrameLayout>
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/stv_commission_person"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_height"
+        app:sBottomLineMargin="0dp"
+        app:sLeftTextColor="@color/black"
+        app:sLeftTextMarginLeft="@dimen/margin_space"
+        app:sLeftTextString="团队推荐人数"
+        app:sLineShow="bottom"
+        app:sRightIconMarginRight="@dimen/margin_space"
+        app:sRightIconRes="@mipmap/arrow_right"
+        app:sRightIconSize="13dp"
+        app:sRightTextColor="@color/light"
+        app:sRightTextMarginRight="30dp"
+        app:sRightTextString="0" />
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/stv_commission_detail"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_height"
+        android:layout_marginTop="@dimen/margin_space"
+        app:sBottomLineMargin="10dp"
+        app:sTopLineMargin="0dp"
+        app:sLeftTextColor="@color/black"
+        app:sLeftTextMarginLeft="@dimen/margin_space"
+        app:sLeftTextString="我的团队"
+        app:sLineShow="both"
+        app:sRightIconMarginRight="@dimen/margin_space"
+        app:sRightIconRes="@mipmap/arrow_right"
+        app:sRightIconSize="13dp"
+        app:sRightTextColor="@color/gray"
+        app:sRightTextMarginRight="30dp"
+        app:sRightTextSize="13sp"
+        app:sRightTextString="查看详情" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_space"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/personal_a18" />
+
+                <TextView
+                    style="@style/Font15_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="二级团队" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="top">
+
+                <TextView
+                    android:id="@+id/tv_commission_money_1"
+                    style="@style/Font15_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.00" />
+
+                <TextView
+                    android:id="@+id/tv_commission_team_1"
+                    style="@style/Font13_light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="推荐人：0人" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/divider_height"
+            android:layout_height="40dp"
+            android:background="@color/divider"
+            android:layout_gravity="center_vertical"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/margin_space">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/personal_a19" />
+
+                <TextView
+                    style="@style/Font15_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="三级团队" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="top">
+
+                <TextView
+                    android:id="@+id/tv_commission_money_2"
+                    style="@style/Font15_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.00" />
+
+                <TextView
+                    android:id="@+id/tv_commission_team_2"
+                    style="@style/Font13_light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="推荐人：0人" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height"
+        android:background="@color/divider" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/btn_commission_down"
+        style="@style/Font15_white"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_height"
+        android:layout_margin="20dp"
+        android:background="@drawable/btn_bg_selector"
+        android:onClick="doClick"
+        android:text="立即发展下级" />
+
+</LinearLayout>

@@ -1,0 +1,59 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.ruanmeng.fragment.MapFirstFragment">
+
+    <include layout="@layout/layout_title" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height"
+        android:background="@color/divider_header" />
+
+    <LinearLayout
+        android:id="@+id/ll_fragment_first_addr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rec_bg_white"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:onClick="doClick"
+        android:padding="@dimen/margin_space">
+
+        <ImageView
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:src="@drawable/circle_3cbca3" />
+
+        <TextView
+            android:id="@+id/tv_fragment_first_city"
+            style="@style/Font14_gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_space"
+            android:text="城市" />
+
+        <ImageView
+            android:layout_width="3dp"
+            android:layout_height="3dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/circle_gray" />
+
+        <TextView
+            android:id="@+id/tv_fragment_first_addr"
+            style="@style/Font14_gray"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="地址" />
+
+    </LinearLayout>
+
+</LinearLayout>

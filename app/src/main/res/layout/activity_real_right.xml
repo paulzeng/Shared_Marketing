@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_real_right"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.ruanmeng.shared_marketing.Partner.RealRightActivity">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height"
+        android:background="@color/divider_header" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:paddingTop="50dp"
+        android:paddingBottom="50dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/personal_a13" />
+
+        <TextView
+            style="@style/Font15_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_space"
+            android:text="身份证信息已通过认证" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height"
+        android:background="@color/divider" />
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/stv_real_right_name"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_height"
+        android:layout_marginTop="@dimen/margin_space"
+        app:sBottomLineMargin="10dp"
+        app:sLeftTextColor="@color/gray"
+        app:sLeftTextMarginLeft="@dimen/margin_space"
+        app:sLeftTextString="真实姓名"
+        app:sLineShow="both"
+        app:sRightTextColor="@color/light"
+        app:sRightTextMarginRight="@dimen/margin_space"
+        app:sRightTextString="***"
+        app:sTopLineMargin="0dp" />
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/stv_real_right_id"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_height"
+        app:sBottomLineMargin="0dp"
+        app:sLeftTextColor="@color/gray"
+        app:sLeftTextMarginLeft="@dimen/margin_space"
+        app:sLeftTextString="身份证"
+        app:sLineShow="bottom"
+        app:sRightTextColor="@color/light"
+        app:sRightTextMarginRight="@dimen/margin_space"
+        app:sRightTextString="******************" />
+
+</LinearLayout>

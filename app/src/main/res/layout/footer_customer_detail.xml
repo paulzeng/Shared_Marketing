@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_space"
+        android:background="@color/background" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height"
+        android:background="@color/divider" />
+
+    <Button
+        android:id="@+id/btn_customer_detail_modify"
+        style="@style/Font15_white"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_height"
+        android:layout_margin="20dp"
+        android:background="@drawable/btn_bg_selector"
+        android:onClick="doClick"
+        android:text="修改所属置业顾问" />
+
+    <LinearLayout
+        android:id="@+id/ll_customer_detail_zhu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/Font13_black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_space"
+                android:layout_marginTop="15dp"
+                android:text="备注：" />
+
+            <EditText
+                android:id="@+id/et_customer_detail_content"
+                style="@style/Font13_black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_space"
+                android:background="@drawable/rec_stroke_d8d8d8"
+                android:gravity="top"
+                android:hint="请输入客户备注信息(144字以内)"
+                android:lineSpacingExtra="3dp"
+                android:minLines="5"
+                android:maxLength="144"
+                android:padding="@dimen/margin_space" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_customer_detail_up"
+            style="@style/Font15_white"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="@dimen/margin_space"
+            android:background="@drawable/btn_bg_blue_selector"
+            android:onClick="doClick"
+            android:text="去电" />
+
+        <Button
+            android:id="@+id/btn_customer_detail_down"
+            style="@style/Font15_white"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:layout_margin="20dp"
+            android:background="@drawable/btn_bg_selector"
+            android:onClick="doClick"
+            android:text="到访" />
+
+    </LinearLayout>
+
+</LinearLayout>

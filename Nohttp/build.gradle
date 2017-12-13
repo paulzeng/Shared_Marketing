@@ -1,0 +1,25 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion project.COMPILE_SDK_VERSION
+    buildToolsVersion project.BUILD_TOOLS_VERSION
+
+    defaultConfig {
+        minSdkVersion project.MIN_SDK_VERSION
+        targetSdkVersion project.TARGET_SDK_VERSION
+        versionName "1.1.0"
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+
+    // 仅在编译的时候需要，但是在运行时不需要依赖时就用povided
+    provided 'com.google.code.gson:gson:2.7'
+
+    // 如果要使用okhttp作为nohttp底层，请再依赖下面的库，记得与nohttp保持版本的一致
+    // provided 'com.yanzhenjie.nohttp:okhttp:1.1.0'
+
+    compile project(':KProgressHUD')
+}

@@ -1,0 +1,39 @@
+<resources>
+
+    <!-- 属性值举例说明（简写时可去掉m）
+         %n$ms：代表输出的是字符串，n代表是第几个参数，设置m的值可以在输出之前放置空格
+         %n$md：代表输出的是整数，n代表是第几个参数，设置m的值可以在输出之前放置空格，也可以设为0m,在输出之前放置m个0
+         %n$mf：代表输出的是浮点数，n代表是第几个参数，设置m的值可以控制小数位数，如m=2.2时，输出格式为00.00  -->
+    <!-- Download status -->
+    <string name="download_progress">已下载：%1$d</string>
+    <string name="download_status_pause">暂停</string>
+    <string name="download_status_be_pause">下载被暂停</string>
+    <string name="download_status_re_download">重新下载</string>
+    <string name="download_status_again_download">再次尝试</string>
+    <string name="download_status_resume">继续下载</string>
+    <string name="download_status_finish">下载完成</string>
+
+    <!-- Download error -->
+    <string name="download_error">下载出错了：%1$s</string>
+    <string name="download_error_server">服务器数据错误</string>
+    <string name="download_error_network">网络不可用，请检查网络</string>
+    <string name="download_error_storage">存储卡错误，请检查存储卡</string>
+    <string name="download_error_space">存储卡空间不足</string>
+    <string name="download_error_timeout">下载超时</string>
+    <string name="download_error_un_know_host">找不到服务器</string>
+    <string name="download_error_url">URL地址错误</string>
+    <string name="download_error_un">网络数据请求失败</string>
+
+    <!-- error -->
+    <string name="error_please_check_network">请检查网络</string>
+    <string name="error_timeout">请求超时，网络不好或者服务器不稳定</string>
+    <string name="error_not_found_server">未发现指定服务器，清切换网络后重试</string>
+    <string name="error_url_error">URL错误</string>
+    <string name="error_not_found_cache">没有找到缓存.</string>
+    <string name="error_system_unsupport_method">系统不支持的请求方法</string>
+    <string name="error_parse_data_error">解析数据时发生错误</string>
+    <string name="error_unknow">网络数据请求失败</string>
+    <string name="error_response_code">服务器响应码%1$d</string>
+    <string name="error_response_code_dex">服务器响应码%1$d，如果你们服务器在这种情况下也返回数据你可以处理</string>
+
+</resources>

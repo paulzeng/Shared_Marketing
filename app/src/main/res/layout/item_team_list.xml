@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/margin_space" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_height"
+            android:background="@color/divider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_height"
+            android:gravity="center_vertical"
+            android:padding="@dimen/margin_space">
+
+            <TextView
+                android:id="@+id/tv_item_team_name"
+                style="@style/Font15_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="名称"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_item_team_phone"
+                style="@style/Font13_gray"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_space"
+                android:layout_weight="1"
+                android:text="手机号码" />
+
+            <TextView
+                android:id="@+id/tv_item_team_time"
+                style="@style/Font13_light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_space"
+                android:text="2017-02-13 13:10" />
+
+            <TextView
+                android:id="@+id/tv_item_team_count"
+                style="@style/Font13_light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_space"
+                android:text="+0.00"
+                android:textColor="@color/colorAccent" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_height"
+            android:layout_marginLeft="@dimen/margin_space"
+            android:layout_marginRight="@dimen/margin_space"
+            android:background="@color/divider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:padding="@dimen/margin_space">
+
+            <TextView
+                style="@style/Font13_light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="已成交客户：" />
+
+            <TextView
+                android:id="@+id/tv_item_team_done"
+                style="@style/Font13_black"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="0人" />
+
+            <TextView
+                style="@style/Font13_light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="推荐客户：" />
+
+            <TextView
+                android:id="@+id/tv_item_team_recommend"
+                style="@style/Font13_black"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="0人" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_height"
+            android:background="@color/divider" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@mipmap/personal_a15">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_space"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_space">
+
+            <TextView
+                android:id="@+id/tv_company_total"
+                style="@style/Font15_white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                android:textSize="30sp" />
+
+            <TextView
+                style="@style/Font13_white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="累计佣金（元）"
+                android:textColor="#A8FFFFFF"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_company_name"
+                style="@style/Font13_white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="公司名称" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/stv_company_person"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_height"
+        app:sBottomLineMargin="0dp"
+        app:sLeftTextColor="@color/black"
+        app:sLeftTextMarginLeft="@dimen/margin_space"
+        app:sLeftTextString="团队推荐人数"
+        app:sLineShow="bottom"
+        app:sRightIconMarginRight="@dimen/margin_space"
+        app:sRightIconRes="@mipmap/arrow_right"
+        app:sRightIconSize="13dp"
+        app:sRightTextColor="@color/light"
+        app:sRightTextMarginRight="30dp"
+        app:sRightTextString="0" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height"
+        android:layout_marginTop="@dimen/margin_space"
+        android:background="@color/divider" />
+
+</LinearLayout>

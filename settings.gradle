@@ -1,0 +1,1 @@
+include ':app', ':Indicator', ':Nohttp', ':LoopView', ':SuperText', ':QRcode', ':ScrollableLayout', ':RollViewPager', ':UmengSocial', ':KProgressHUD', ':Cropper', ':GridPasswordView', ':PhotoView', ':JPush', ':BaiduMap'

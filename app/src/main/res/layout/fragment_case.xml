@@ -1,0 +1,149 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.ruanmeng.fragment.CaseFragment">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:paddingTop="@dimen/toolbar_padding_top">
+
+        <ImageView
+            android:id="@+id/tv_fragment_case_setting"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="end"
+            android:clickable="true"
+            android:onClick="doClick"
+            android:padding="10dp"
+            android:src="@mipmap/personal_a2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="30dp">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/iv_fragment_case_img"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:clickable="true"
+                    android:onClick="doClick"
+                    android:src="@mipmap/personal_a1"
+                    android:scaleType="centerCrop"
+                    app:riv_border_color="#4CFFFFFF"
+                    app:riv_border_width="3dp"
+                    app:riv_oval="true" />
+
+                <LinearLayout
+                    android:id="@+id/ll_fragment_case_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv_fragment_case_name"
+                        style="@style/Font15_white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="名称"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/tv_fragment_case_type"
+                        style="@style/Font13_white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_space"
+                        android:background="@drawable/rec_ova_bg_e50000"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="@dimen/margin_space"
+                        android:paddingRight="@dimen/margin_space"
+                        android:paddingTop="3dp"
+                        android:text="案场经理" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_vertical"
+                    android:padding="5dp"
+                    android:src="@mipmap/personal_a5"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/stv_fragment_case_phone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_height"
+        android:layout_marginTop="@dimen/margin_space"
+        app:sBottomLineMargin="10dp"
+        app:sLeftTextColor="@color/black"
+        app:sLeftTextMarginLeft="@dimen/margin_space"
+        app:sLeftTextSize="13sp"
+        app:sLeftTextString="手机号"
+        app:sLineShow="both"
+        app:sRightTextColor="@color/light"
+        app:sRightTextMarginRight="30dp"
+        app:sRightTextSize="13sp"
+        app:sRightTextString="13617066904"
+        app:sTopLineMargin="0dp" />
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/stv_fragment_case_gender"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_height"
+        app:sBottomLineMargin="10dp"
+        app:sLeftTextColor="@color/black"
+        app:sLeftTextMarginLeft="@dimen/margin_space"
+        app:sLeftTextSize="13sp"
+        app:sLeftTextString="性别"
+        app:sLineShow="bottom"
+        app:sRightIconMarginRight="@dimen/margin_space"
+        app:sRightIconRes="@mipmap/arrow_right"
+        app:sRightIconSize="13dp"
+        app:sRightTextColor="@color/light"
+        app:sRightTextMarginRight="30dp"
+        app:sRightTextSize="13sp"
+        app:sRightTextString="男" />
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/stv_fragment_case_password"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_height"
+        app:sBottomLineMargin="0dp"
+        app:sLeftTextColor="@color/black"
+        app:sLeftTextMarginLeft="@dimen/margin_space"
+        app:sLeftTextSize="13sp"
+        app:sLeftTextString="修改密码"
+        app:sLineShow="bottom"
+        app:sRightIconMarginRight="@dimen/margin_space"
+        app:sRightIconRes="@mipmap/arrow_right"
+        app:sRightIconSize="13dp" />
+
+</LinearLayout>

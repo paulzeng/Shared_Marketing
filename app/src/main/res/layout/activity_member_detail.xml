@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_member_detail_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.ruanmeng.shared_marketing.Partner.MemberDetailActivity">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:background="@color/colorAccent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="@dimen/margin_space"
+                    android:gravity="center"
+                    android:padding="@dimen/margin_space">
+
+                    <TextView
+                        style="@style/Font15_white"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="本单佣金收益" />
+
+                    <View
+                        android:layout_width="@dimen/divider_height"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/divider" />
+
+                    <TextView
+                        android:id="@+id/tv_member_detail_count"
+                        style="@style/Font15_white"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="0.00" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_height"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/margin_space">
+
+                    <TextView
+                        android:id="@+id/tv_member_detail_done"
+                        style="@style/Font13_black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="已成交客户：0" />
+
+                    <TextView
+                        android:id="@+id/tv_member_detail_recommend"
+                        style="@style/Font13_black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:text="推荐客户数：0" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_height"
+                    android:layout_marginLeft="@dimen/margin_space"
+                    android:layout_marginRight="@dimen/margin_space"
+                    android:background="@color/divider" />
+
+                <TextView
+                    android:id="@+id/tv_member_detail_phone"
+                    style="@style/Font13_light"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_height"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/margin_space"
+                    android:text="手机号码：" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_height"
+                    android:layout_marginLeft="@dimen/margin_space"
+                    android:layout_marginRight="@dimen/margin_space"
+                    android:background="@color/divider" />
+
+                <TextView
+                    android:id="@+id/tv_member_detail_sign"
+                    style="@style/Font13_light"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_height"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/margin_space"
+                    android:text="注册时间：" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_height"
+                android:layout_marginBottom="@dimen/margin_space"
+                android:background="@color/divider" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_height"
+                android:background="@color/divider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/line_height"
+                    android:padding="@dimen/margin_space"
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/Font13_light"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:layout_marginTop="5dp"
+                        android:text="房源信息：" />
+
+                    <TextView
+                        android:id="@+id/tv_member_detail_house"
+                        style="@style/Font13_black"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingExtra="3dp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_height"
+                    android:layout_marginLeft="@dimen/margin_space"
+                    android:layout_marginRight="@dimen/margin_space"
+                    android:background="@color/divider" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_height"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/margin_space">
+
+                    <TextView
+                        style="@style/Font13_light"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="成交价格：" />
+
+                    <TextView
+                        android:id="@+id/tv_member_detail_deal"
+                        style="@style/Font13_light"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0万元"
+                        android:textColor="@color/colorAccent" />
+
+                    <TextView
+                        style="@style/Font13_light"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="成交时间：" />
+
+                    <TextView
+                        android:id="@+id/tv_member_detail_time"
+                        style="@style/Font13_black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2017-02-15 11:21" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_height"
+                android:background="@color/divider" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_height"
+                android:layout_marginTop="@dimen/margin_space"
+                android:background="@color/divider"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_space">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        style="@style/Font13_light"
+                        android:layout_width="65dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/margin_space"
+                        android:gravity="end"
+                        android:text="买方：" />
+
+                    <TextView
+                        android:id="@+id/tv_member_detail_buy"
+                        style="@style/Font13_black"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="姓名" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        style="@style/Font13_light"
+                        android:layout_width="65dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/margin_space"
+                        android:gravity="end"
+                        android:text="项目名称：" />
+
+                    <TextView
+                        android:id="@+id/tv_member_detail_name"
+                        style="@style/Font13_black"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="名称" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center_vertical"
+                    android:visibility="gone" >
+
+                    <TextView
+                        style="@style/Font13_light"
+                        android:layout_width="65dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/margin_space"
+                        android:gravity="end"
+                        android:text="面积：" />
+
+                    <TextView
+                        android:id="@+id/tv_member_detail_square"
+                        style="@style/Font13_black"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0㎡" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        style="@style/Font13_light"
+                        android:layout_width="65dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/margin_space"
+                        android:gravity="end"
+                        android:text="总价：" />
+
+                    <TextView
+                        android:id="@+id/tv_member_detail_total"
+                        style="@style/Font13_black"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        style="@style/Font13_light"
+                        android:layout_width="65dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/margin_space"
+                        android:gravity="end"
+                        android:text="置业顾问：" />
+
+                    <TextView
+                        android:id="@+id/tv_member_detail_zhi"
+                        style="@style/Font13_black"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="姓名" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        style="@style/Font13_light"
+                        android:layout_width="65dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/margin_space"
+                        android:gravity="end"
+                        android:text="佣金比例：" />
+
+                    <TextView
+                        android:id="@+id/tv_member_detail_percent"
+                        style="@style/Font13_black"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0%" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_height"
+                android:layout_marginBottom="20dp"
+                android:background="@color/divider" />
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <include layout="@layout/layout_title_padding" />
+
+</FrameLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.ruanmeng.shared_marketing.Driver.OrderActivity">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height"
+        android:background="@color/divider_header"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/mv_order_map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <ImageView
+            android:id="@+id/iv_order_location"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom"
+            android:layout_margin="@dimen/margin_space"
+            android:background="@drawable/rec_bg_eeffffff_stroke_d8d8d8"
+            android:clickable="true"
+            android:onClick="doClick"
+            android:padding="12dp"
+            android:src="@mipmap/icon_location_map" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginBottom="30dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/iv_order_daohang"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="@dimen/margin_space"
+                android:layout_marginRight="@dimen/margin_space"
+                android:clickable="true"
+                android:onClick="doClick"
+                android:src="@mipmap/icon_daohang" />
+
+            <TextView
+                android:id="@+id/tv_order_done"
+                style="@style/Font15_white"
+                android:layout_width="160dp"
+                android:layout_height="30dp"
+                android:background="@drawable/rec_ova_bg_red"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="doClick"
+                android:text="结束订单" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_order_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </FrameLayout>
+
+</LinearLayout>

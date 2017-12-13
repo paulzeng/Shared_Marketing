@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ruanmeng.shared_marketing">
+
+    <!-- 百度地图权限 start -->
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="false"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+    <!-- OpenGLES 2.0 -->
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <!-- 百度地图权限 end -->
+    <application
+        android:name="com.ruanmeng.Application"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".GuideActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Partner.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Partner.CityActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NoticeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NoticeDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Partner.SearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Partner.CustomerDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Partner.RecommendActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Partner.LowerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Partner.MouldActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Partner.SaveActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".WebActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ForgetActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Partner.HouseDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Partner.PhotoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Partner.RealnameActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Partner.RealRightActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Partner.RealWrongActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Partner.PointsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Partner.ExchangeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Partner.PointsRecordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Partner.CommissionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Partner.TeamActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Partner.CommissionListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Partner.CommissionBalanceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Partner.MemberActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Partner.MemberDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Partner.AccountActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Partner.WithdrawActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Partner.CommissionRecordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Partner.IncomeDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Partner.AppointActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Partner.FeedbackActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".Partner.InfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Partner.NicknameActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Partner.SettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Partner.DealActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Partner.AboutActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Partner.PasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Partner.HelpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Case.MainCaseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Case.ModifyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Case.AdviserDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Unit.MainUnitActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Channel.MainChannelActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Channel.CompanyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Channel.TeamChannelActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Channel.CommissionChannelActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Adviser.MainAdviserActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Resident.MainResidentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Resident.ReviewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CropperActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Partner.HouseTypeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Adviser.FilterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Adviser.FilterResultActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Distribution.SaleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Distribution.MainDistributionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Distribution.TeamDistributionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Specialist.MainSpecialistActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Specialist.TeamSpecialistActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Driver.MainDriverActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Driver.GrabActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Partner.CodeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Partner.RewardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Partner.RewardDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Partner.AppointMapActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Driver.OrderActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 百度地图 start -->
+        <!--
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="DvQuuNLP55unm8snCWsTkVFWaSSMn9hT" />
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":location" />
+        -->
+        <!-- 百度地图 end -->
+
+
+        <!-- 微信分享 begin -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- 微信分享 begin -->
+
+
+        <!-- JPush 用户自定义的广播接收器 -->
+        <receiver
+            android:name="com.ruanmeng.service.JPushReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" /> <!-- Required  用户注册SDK的intent -->
+                <action android:name="cn.jpush.android.intent.UNREGISTRATION" />
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> <!-- Required  用户接收SDK消息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> <!-- Required  用户接收SDK通知栏信息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> <!-- Required  用户打开自定义通知栏的intent -->
+                <action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK" /> <!-- Optional 用户接受Rich Push Javascript 回调函数的intent -->
+                <action android:name="cn.jpush.android.intent.CONNECTION" /> <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="${applicationId}" />
+            </intent-filter>
+        </receiver>
+        <!-- JPush end -->
+
+
+        <!-- service 版本更新 -->
+        <service
+            android:name="com.ruanmeng.service.UpdateService"
+            android:process=":update" />
+
+        <!-- service 获取时间戳 -->
+        <!--
+             指定android:process属性，开启多进程模式
+             使用多进程会造成如下几方面的问题：
+               （1）静态成员和单例模式完全失效
+               （2）线程同步机制完全失效
+               （3）SharedPreferences 的可靠性下降
+               （4）Application会多次创建
+        -->
+        <service
+            android:name="com.ruanmeng.service.TimeStampService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_path" />
+        </provider>
+
+    </application>
+
+</manifest>

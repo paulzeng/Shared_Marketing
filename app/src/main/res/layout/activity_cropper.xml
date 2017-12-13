@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_dark">
+
+    <com.edmodo.cropper.CropImageView
+        android:id="@+id/civ_cropper_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:layout_gravity="center"
+        app:aspectRatioX="4"
+        app:aspectRatioY="3"
+        app:fixAspectRatio="true" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/rec_bg_black_light"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_cropper_cancel"
+            style="@style/Font15_white"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="doClick"
+            android:text="取消" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="30dp"
+            android:background="@color/gray" />
+
+        <TextView
+            android:id="@+id/tv_cropper_sure"
+            style="@style/Font15_white"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="doClick"
+            android:text="应用" />
+
+    </LinearLayout>
+
+</FrameLayout>

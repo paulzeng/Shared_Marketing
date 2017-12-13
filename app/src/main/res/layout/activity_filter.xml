@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ruanmeng.shared_marketing.Adviser.FilterActivity">
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/divider_height"
+        android:background="@color/divider_header"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/divider_height"
+        android:background="@color/divider"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_filter_status" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_space"
+        android:paddingLeft="@dimen/margin_space"
+        android:paddingRight="@dimen/margin_space"
+        android:paddingTop="@dimen/margin_space"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view4">
+
+        <Button
+            android:id="@+id/btn_filter_time1"
+            style="@style/Font13_black"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:onClick="doClick"
+            android:background="@drawable/rec_bg_white_stroke_red"
+            android:text="本日"
+            android:textColor="@color/colorAccent" />
+
+        <Button
+            android:id="@+id/btn_filter_time2"
+            style="@style/Font13_black"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:onClick="doClick"
+            android:layout_marginLeft="@dimen/margin_space"
+            android:background="@drawable/rec_bg_white_stroke_red"
+            android:text="近1周"
+            android:textColor="@color/colorAccent" />
+
+        <Button
+            android:id="@+id/btn_filter_time3"
+            style="@style/Font13_black"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:onClick="doClick"
+            android:layout_marginLeft="@dimen/margin_space"
+            android:background="@drawable/rec_bg_white_stroke_red"
+            android:text="近1月"
+            android:textColor="@color/colorAccent" />
+
+        <Button
+            android:id="@+id/btn_filter_time4"
+            style="@style/Font13_black"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:onClick="doClick"
+            android:layout_marginLeft="@dimen/margin_space"
+            android:background="@drawable/rec_bg_white_stroke_red"
+            android:text="近3月"
+            android:textColor="@color/colorAccent" />
+
+        <Button
+            android:id="@+id/btn_filter_time5"
+            style="@style/Font13_black"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:onClick="doClick"
+            android:layout_marginLeft="@dimen/margin_space"
+            android:background="@drawable/rec_bg_white_stroke_red"
+            android:text="近6月"
+            android:textColor="@color/colorAccent" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view5"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/divider_height"
+        android:background="@color/divider"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view5"
+        android:id="@+id/linearLayout2"
+        app:layout_constraintHorizontal_bias="0.0">
+
+        <LinearLayout
+            android:id="@+id/ll_filter_time1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_height"
+            android:gravity="center_vertical"
+            android:onClick="doClick"
+            android:padding="@dimen/margin_space">
+
+            <TextView
+                style="@style/Font14_black"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="起始时间" />
+
+            <TextView
+                android:id="@+id/tv_filter_time1"
+                style="@style/Font13_light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:layout_marginLeft="5dp"
+                android:src="@mipmap/arrow_right" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_height"
+            android:background="@color/divider"
+            android:layout_marginLeft="@dimen/margin_space"
+            android:layout_marginRight="@dimen/margin_space" />
+
+        <LinearLayout
+            android:id="@+id/ll_filter_time2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_height"
+            android:gravity="center_vertical"
+            android:onClick="doClick"
+            android:padding="@dimen/margin_space">
+
+            <TextView
+                style="@style/Font14_black"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="截止时间" />
+
+            <TextView
+                android:id="@+id/tv_filter_time2"
+                style="@style/Font13_light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:layout_marginLeft="5dp"
+                android:src="@mipmap/arrow_right" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_filter_status"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/line_height"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:onClick="doClick"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/margin_space"
+        android:paddingRight="@dimen/margin_space"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view3">
+
+        <TextView
+            style="@style/Font14_black"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="请选择筛选方式" />
+
+        <TextView
+            android:id="@+id/tv_filter_status"
+            style="@style/Font13_light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="全部" />
+
+        <ImageView
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:layout_marginLeft="5dp"
+            android:src="@mipmap/arrow_right" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="@dimen/divider_height"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="0dp"
+        android:background="@color/divider"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        android:id="@+id/view6" />
+
+    <Button
+        android:id="@+id/btn_filter_ok"
+        style="@style/Font15_white"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/btn_height"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rec_bg_red"
+        android:text="确定"
+        android:onClick="doClick"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view6" />
+
+</android.support.constraint.ConstraintLayout>

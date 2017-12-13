@@ -1,0 +1,81 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.ruanmeng.fragment.MapSecondFragment">
+
+    <LinearLayout
+        android:id="@+id/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="?attr/colorPrimary"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/margin_space">
+
+        <TextView
+            android:id="@+id/tv_fragment_second_city"
+            style="@style/Font15_gray"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:maxWidth="60dp"
+            android:text="洛阳" />
+
+        <ImageView
+            android:layout_width="8dp"
+            android:layout_height="10dp"
+            android:layout_marginLeft="5dp"
+            android:src="@mipmap/arr_1" />
+
+        <EditText
+            android:id="@+id/et_fragment_second_city"
+            style="@style/Font13_black"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="现在在哪里"
+            android:imeOptions="actionSearch"
+            android:paddingLeft="@dimen/margin_space"
+            android:singleLine="true" />
+
+        <View
+            android:layout_width="@dimen/divider_height"
+            android:layout_height="20dp"
+            android:background="@color/divider" />
+
+        <TextView
+            android:id="@+id/tv_fragment_second_cancle"
+            style="@style/Font15_gray"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="doClick"
+            android:paddingLeft="@dimen/margin_space"
+            android:paddingRight="@dimen/margin_space"
+            android:text="取消" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height"
+        android:background="@color/divider_header" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/lv_fragment_second_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="@dimen/margin_space"
+        android:layout_marginRight="@dimen/margin_space"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rec_bg_white"
+        android:paddingBottom="@dimen/margin_space"
+        android:paddingTop="@dimen/margin_space" />
+
+</LinearLayout>

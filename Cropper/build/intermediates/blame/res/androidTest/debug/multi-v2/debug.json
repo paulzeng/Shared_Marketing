@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "D:\\workspace_studio\\Shared_Marketing\\Cropper\\build\\intermediates\\res\\merged\\androidTest\\debug\\values_values.arsc.flat",
+            "map": [
+                {
+                    "source": "D:\\workspace_studio\\Shared_Marketing\\Cropper\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,13,14,15,16,17,18",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,109,167,221,282,350,769,816,861,908,958,1000",
+                        "endColumns": "53,57,53,60,67,53,46,44,46,49,41,44",
+                        "endOffsets": "104,162,216,277,345,399,811,856,903,953,995,1040"
+                    }
+                }
+            ]
+        }
+    ]
+}

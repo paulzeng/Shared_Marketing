@@ -1,0 +1,335 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.ruanmeng.fragment.CenterFragment">
+
+    <FrameLayout
+        android:id="@+id/fl_fragment_center_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:paddingTop="@dimen/toolbar_padding_top">
+
+        <ImageView
+            android:id="@+id/iv_fragment_center_setting"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="end"
+            android:clickable="true"
+            android:onClick="doClick"
+            android:padding="10dp"
+            android:src="@mipmap/personal_a2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="30dp">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/iv_fragment_center_img"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:clickable="true"
+                    android:onClick="doClick"
+                    android:src="@mipmap/personal_a1"
+                    app:riv_border_color="#4CFFFFFF"
+                    app:riv_border_width="3dp"
+                    app:riv_oval="true" />
+
+                <LinearLayout
+                    android:id="@+id/ll_fragment_center_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:clickable="true"
+                    android:onClick="doClick"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/tv_fragment_center_name"
+                            style="@style/Font15_white"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="名称"
+                            android:maxWidth="130dp"
+                            android:textSize="18sp"
+                            android:maxLines="1"
+                            android:ellipsize="end" />
+
+                        <TextView
+                            android:id="@+id/tv_fragment_center_real"
+                            style="@style/Font13_white"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="（未认证）" />
+
+                        <ImageView
+                            android:id="@+id/iv_fragment_center_vip"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginLeft="5dp"
+                            android:src="@mipmap/personal_a3" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_fragment_center_type"
+                        style="@style/Font13_white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_space"
+                        android:background="@drawable/rec_ova_bg_e50000"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="@dimen/margin_space"
+                        android:paddingRight="@dimen/margin_space"
+                        android:paddingTop="3dp"
+                        android:text="业主合作人" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/iv_fragment_center_sorrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_vertical"
+                    android:padding="5dp"
+                    android:src="@mipmap/personal_a5" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#1EFFFFFF">
+
+                <LinearLayout
+                    android:id="@+id/ll_fragment_center_yue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:onClick="doClick"
+                    android:orientation="vertical"
+                    android:padding="@dimen/margin_space">
+
+                    <TextView
+                        style="@style/Font15_white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="账户余额(元)" />
+
+                    <TextView
+                        android:id="@+id/tv_fragment_center_yue"
+                        style="@style/Font15_white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="￥0.00" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/white" />
+
+                <LinearLayout
+                    android:id="@+id/ll_fragment_center_yongjin"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:onClick="doClick"
+                    android:orientation="vertical"
+                    android:padding="@dimen/margin_space">
+
+                    <TextView
+                        style="@style/Font15_white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="累计佣金(元)" />
+
+                    <TextView
+                        android:id="@+id/tv_fragment_center_yongjin"
+                        style="@style/Font15_white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="￥0.00" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/stv_fragment_center_doing"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_height"
+        android:layout_marginTop="@dimen/margin_space"
+        app:sBottomLineMargin="10dp"
+        app:sLeftTextColor="@color/black"
+        app:sLeftTextMarginLeft="@dimen/margin_space"
+        app:sLeftTextString="未结算佣金"
+        app:sLineShow="both"
+        app:sRightIconMarginRight="@dimen/margin_space"
+        app:sRightIconRes="@mipmap/personal_a9"
+        app:sRightIconSize="12dp"
+        app:sRightTextColor="@color/light"
+        app:sRightTextMarginRight="30dp"
+        app:sRightTextString="0.00"
+        app:sTopLineMargin="0dp" />
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/stv_fragment_center_done"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_height"
+        app:sBottomLineMargin="0dp"
+        app:sLeftTextColor="@color/black"
+        app:sLeftTextMarginLeft="@dimen/margin_space"
+        app:sLeftTextString="已结算佣金"
+        app:sLineShow="bottom"
+        app:sRightIconMarginRight="@dimen/margin_space"
+        app:sRightIconRes="@mipmap/personal_a9"
+        app:sRightIconSize="12dp"
+        app:sRightTextColor="@color/light"
+        app:sRightTextMarginRight="30dp"
+        app:sRightTextString="0.00" />
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/stv_fragment_center_ji"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_height"
+        android:layout_marginTop="@dimen/margin_space"
+        app:sBottomLineMargin="10dp"
+        app:sLeftIconMarginLeft="@dimen/margin_space"
+        app:sLeftIconRes="@mipmap/personal_a6"
+        app:sLeftTextColor="@color/black"
+        app:sLeftTextMarginLeft="@dimen/margin_space"
+        app:sLeftTextString="我的积分"
+        app:sLineShow="both"
+        app:sRightIconMarginRight="@dimen/margin_space"
+        app:sRightIconRes="@mipmap/personal_a9"
+        app:sRightIconSize="12dp"
+        app:sRightTextColor="@color/light"
+        app:sRightTextMarginRight="30dp"
+        app:sRightTextString="0"
+        app:sTopLineMargin="0dp" />
+
+    <net.cachapa.expandablelayout.ExpandableLayout
+        android:id="@+id/el_fragment_center_expand"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:el_duration="500"
+        app:el_expanded="false">
+
+        <com.allen.library.SuperTextView
+            android:id="@+id/stv_fragment_center_yue"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_height"
+            app:layout_expandable="true"
+            app:sBottomLineMargin="10dp"
+            app:sLeftIconMarginLeft="@dimen/margin_space"
+            app:sLeftIconRes="@mipmap/personal_a7"
+            app:sLeftTextColor="@color/black"
+            app:sLeftTextMarginLeft="@dimen/margin_space"
+            app:sLeftTextString="一键约车"
+            app:sLineShow="bottom"
+            app:sRightIconMarginRight="@dimen/margin_space"
+            app:sRightIconRes="@mipmap/personal_a9"
+            app:sRightIconSize="12dp" />
+
+    </net.cachapa.expandablelayout.ExpandableLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/stv_fragment_center_feedback"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_height"
+            android:background="@color/white"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:onClick="doClick"
+            android:paddingLeft="@dimen/margin_space"
+            android:paddingRight="@dimen/margin_space">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/personal_a8" />
+
+            <TextView
+                style="@style/Font14_black"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:text="投诉和建议" />
+
+            <ImageView
+                android:id="@+id/iv_fragment_center_dian"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/circle_red"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:src="@mipmap/arrow_right" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_height"
+            android:background="@color/divider" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_fragment_center_check"
+        style="@style/Font15_white"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_height"
+        android:layout_margin="20dp"
+        android:background="@drawable/btn_bg_selector"
+        android:onClick="doClick"
+        android:text="查看累计佣金" />
+
+</LinearLayout>

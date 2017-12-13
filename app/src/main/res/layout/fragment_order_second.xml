@@ -1,0 +1,62 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ruanmeng.shared_marketing.Driver.OrderSecondFragment">
+
+    <LinearLayout
+        android:id="@+id/ll_order_addr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_space">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_space"
+            android:layout_marginRight="@dimen/margin_space">
+
+            <TextView
+                style="@style/Font13_black"
+                android:layout_width="65dp"
+                android:layout_height="wrap_content"
+                android:text="客户位置：" />
+
+            <TextView
+                android:id="@+id/tv_order_addr_start"
+                style="@style/Font13_light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="起点" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_space"
+            android:layout_marginRight="@dimen/margin_space"
+            android:layout_marginTop="@dimen/margin_space">
+
+            <TextView
+                style="@style/Font13_black"
+                android:layout_width="65dp"
+                android:layout_height="wrap_content"
+                android:text="终点位置：" />
+
+            <TextView
+                android:id="@+id/tv_order_addr_end"
+                style="@style/Font13_light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="终点" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

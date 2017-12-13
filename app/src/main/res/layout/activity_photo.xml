@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_photo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1C1C1C"
+    android:orientation="vertical"
+    tools:context="com.ruanmeng.shared_marketing.Partner.PhotoActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/toolbar_padding_top">
+
+        <TextView
+            android:id="@+id/tv_nav_photo_title"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:text="0/0"/>
+
+        <ImageView
+            android:id="@id/iv_nav_back"
+            android:layout_width="35dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:clickable="true"
+            android:onClick="doClick"
+            android:padding="6dp"
+            android:src="@mipmap/arrow_left_1" />
+
+        <TextView
+            android:id="@+id/tv_photo_save"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_gravity="end"
+            android:layout_margin="10dp"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="doClick"
+            android:text="保存"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.ruanmeng.photoview.HackyViewPager
+            android:id="@+id/hv_photo_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/tv_photo_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="40dp"
+            android:text="效果图"
+            android:textColor="@android:color/white"
+            android:textSize="13sp" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black">
+
+        <com.shizhefei.view.indicator.RecyclerIndicatorView
+            android:id="@+id/siv_photo_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

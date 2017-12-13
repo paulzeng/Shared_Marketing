@@ -1,0 +1,37 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\workspace_studio\Shared_Marketing\Cropper\AndroidManifest.xml:1:1-5:32
+INJECTED from D:\workspace_studio\Shared_Marketing\Cropper\AndroidManifest.xml:1:1-5:32
+INJECTED from D:\workspace_studio\Shared_Marketing\Cropper\AndroidManifest.xml:1:1-5:32
+INJECTED from D:\workspace_studio\Shared_Marketing\Cropper\AndroidManifest.xml:1:1-5:32
+INJECTED from D:\workspace_studio\Shared_Marketing\Cropper\AndroidManifest.xml:1:1-5:32
+INJECTED from D:\workspace_studio\Shared_Marketing\Cropper\AndroidManifest.xml:1:1-5:32
+INJECTED from D:\workspace_studio\Shared_Marketing\Cropper\AndroidManifest.xml:1:1-5:32
+	package
+		ADDED from D:\workspace_studio\Shared_Marketing\Cropper\AndroidManifest.xml:2:5-33
+		INJECTED from D:\workspace_studio\Shared_Marketing\Cropper\AndroidManifest.xml
+		INJECTED from D:\workspace_studio\Shared_Marketing\Cropper\AndroidManifest.xml
+	android:versionName
+		ADDED from D:\workspace_studio\Shared_Marketing\Cropper\AndroidManifest.xml:5:5-30
+		INJECTED from D:\workspace_studio\Shared_Marketing\Cropper\AndroidManifest.xml
+		INJECTED from D:\workspace_studio\Shared_Marketing\Cropper\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\workspace_studio\Shared_Marketing\Cropper\AndroidManifest.xml:3:5-63
+	android:versionCode
+		ADDED from D:\workspace_studio\Shared_Marketing\Cropper\AndroidManifest.xml:4:5-28
+		INJECTED from D:\workspace_studio\Shared_Marketing\Cropper\AndroidManifest.xml
+		INJECTED from D:\workspace_studio\Shared_Marketing\Cropper\AndroidManifest.xml
+uses-sdk
+INJECTED from D:\workspace_studio\Shared_Marketing\Cropper\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\workspace_studio\Shared_Marketing\Cropper\AndroidManifest.xml
+INJECTED from D:\workspace_studio\Shared_Marketing\Cropper\AndroidManifest.xml
+INJECTED from D:\workspace_studio\Shared_Marketing\Cropper\AndroidManifest.xml
+INJECTED from D:\workspace_studio\Shared_Marketing\Cropper\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from D:\workspace_studio\Shared_Marketing\Cropper\AndroidManifest.xml
+		ADDED from D:\workspace_studio\Shared_Marketing\Cropper\AndroidManifest.xml
+		INJECTED from D:\workspace_studio\Shared_Marketing\Cropper\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from D:\workspace_studio\Shared_Marketing\Cropper\AndroidManifest.xml
+		ADDED from D:\workspace_studio\Shared_Marketing\Cropper\AndroidManifest.xml
+		INJECTED from D:\workspace_studio\Shared_Marketing\Cropper\AndroidManifest.xml
